@@ -14,12 +14,46 @@ How can we use this to find the intercept?
 ### Soln
 Add column of 1s to x. Plug it into the function. The function value that corresponds to the 1s would be the intercept.
 
+Do out an example with x as a 2x2 matrix and y as a 2x1 matrix.
+Once you add the 1s column to x, then you would get an intercept when you expand out the equations.
+
 ## Heavy tailed distributions
 
 Can you tell me some symmetric, heavy tailed distributions? Anything more heavy tailed than normal will work.
 
 ### Soln
 t distribution is heavier at the ends.
-Cauchy distribution is also heavier. (ratio of two normal distributions)
+Cauchy distribution is also heavier. (ratio of 2 normal distributions)
 
 ## Joint Uniform Distribution on Unit Disk
+Let F(x, y) be a joint distribution that is unifomr on the unit disk. 
+What is the correlation between x and y? Are x and y independent?
+
+### Soln
+No, x and y have **0 correlation**. Intuitively, its because everything is symmetric. For every positive value (x, y) there is a negative value (x, y) equally.
+
+As a proof, Cov(X, Y) = E(XY) - E(X)E(Y) = 0 - 0 * 0 = 0
+
+No, x and y are not independent. We can tell by looking at the pdf.
+
+f(x, y) = 1/pi within circle, and 0 otherwise. This is because its uniform, so pdf is 1/Area.
+If x and y are independent, then f(x, y) = f(x)f(y). So f(x) = f(y) = 1/sqrt(pi).
+
+We know this is not possible because pdf would not integrate to 1. Also because if you look at 
+vertical and horizontal slices of uniform circle, we know that pdf of x isn't constant. 
+
+## Covariance Matrix
+What is the covariance matrix?
+
+How would you find the find the covariance matrix of a matrix X?
+
+### Soln
+Covariance matrix is a sq matrix that gives the covariance between each pair of elements.
+
+You can calculate covariance matrix by doing:
+E(X X^T) - E(X)E(X^T)
+
+
+## Tips
+- for matrices, you need to write it out.
+
