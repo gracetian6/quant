@@ -12,7 +12,7 @@ Let x be a _nxp_ vector and y be a _nx1_ vector. We have a function f(x, y) that
 How can we use this to find the intercept?
 
 ### Soln
-Add column of 1s to x. Plug it into the function. The value that corresponds to the 1s would be the intercept.
+Add column of 1s to x. Plug it into the function. The function value that corresponds to the 1s would be the intercept.
 
 ## Heavy tailed distributions
 
