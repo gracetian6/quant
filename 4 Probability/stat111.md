@@ -57,3 +57,7 @@ E(X X^T) - E(X)E(X^T)
 ## Tips
 - for matrices, you need to write it out.
 
+## X, Y, Z iid U(0,1). Prob X+Y>Z?
+
+Pyramid of cube with points (1,0,1), (0,1,1) and (0,0,0) since X + Y = Z. We take region below the plane since <Z. 
+This is a pyramid of base 1/2 and height 1 => volume is 1/3 * 1/2 * 1 = 1/6.
