@@ -62,3 +62,9 @@ E(X X^T) - E(X)E(X^T)
 Pyramid of cube with points (1,0,1), (0,1,1) and (0,0,0) since X + Y = Z. We take region below the plane since <Z. 
 The region above is a pyramid of base 1/2 and height 1 => volume is 1/3 * 1/2 * 1 = 1/6.
 Region below is 1-1/6 = 5/6
+
+## Variance for Duplicated Data
+What would happen ot the variance of the whole data if the whole data is duplicated?
+
+### Solution
+The variance is a measure of how the data is distributed wrt the mean, so it will remain the same.
