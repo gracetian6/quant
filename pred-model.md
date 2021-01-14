@@ -17,6 +17,7 @@ Statistic: RMSE
 
 
 ## Cross Validation
+
 Cross Validation allows us to compare different machine learning methods and get a sense of how well they
 will work in practice. 
 
@@ -32,5 +33,5 @@ at the end. In the end, every block of data is used for testing and we can compa
 Variants: Leave One Out Cross Validation (everyone is a block), 10-fold cross validation
 
 ### Sources
-- Classificaiton & Regression: https://machinelearningmastery.com/classification-versus-regression-in-machine-learning/
+- Classification & Regression: https://machinelearningmastery.com/classification-versus-regression-in-machine-learning/
 - Cross Validation: https://www.youtube.com/watch?v=fSytzGwwBVw by StatQuest with Josh Starner
