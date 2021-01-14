@@ -61,7 +61,10 @@ Variants: Leave One Out Cross Validation (everyone is a block), 10-fold cross va
 
 ## AUC and ROC
 ROC curves make it easy to identify the best threshold for making a decision (i.e. whether threshold for obesity should prob of 0.9 or 0.5). 
+Plots false positive rate on x axis and true positive rate on y axis. 
 The AUC (area under curve) can help you determine which categorization method is better. (Larger AUC is better). 
+Con: Can't interpret predictions as probabilities because AUC is determined by rankings, so can't explain uncertainty of model.
+
 ### Sources
 - Classification & Regression: https://machinelearningmastery.com/classification-versus-regression-in-machine-learning/
 - Cross Validation: https://www.youtube.com/watch?v=fSytzGwwBVw by StatQuest with Josh Starner
