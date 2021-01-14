@@ -83,3 +83,4 @@ Con: Can't interpret predictions as probabilities because AUC is determined by r
 - Ridge Regression: https://www.youtube.com/watch?v=Q81RR3yKn30 by StatQuest with Josh Starner
 - Lasso Regression: https://www.youtube.com/watch?v=NGf0voTMlcs&t=34s by StatQuest with Josh Starner
 - AUC and ROC: https://www.youtube.com/watch?v=4jRBRDbJemM by StatQuest with Josh Starner
+- Logistic Regression: https://www.youtube.com/watch?v=yIYKR4sgzI8 by StatQuest with Josh Starner
