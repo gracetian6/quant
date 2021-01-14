@@ -18,6 +18,13 @@ Con: Can't interpret predictions as probabilities because AUC is determined by r
 
 ### SVM
 
+The shortest distance between the observations and the threshold is called the **margin**. When we use the threshold that gives 
+us the largest margin to make classifications, we are using the maximal marginal classifier. (bad because super sensitive to outliers)
+
+Support Vector Classifier comes from the fact that the observations on the edge and within the soft margin are called support vectors.
+
+
 ### Sources 
 - AUC and ROC: https://www.youtube.com/watch?v=4jRBRDbJemM by StatQuest with Josh Starner
 - Logistic Regression: https://www.youtube.com/watch?v=yIYKR4sgzI8 by StatQuest with Josh Starner
+- SVM Part 1: https://www.youtube.com/watch?v=efR1C6CvhmE by StatQuest with Josh Starner
