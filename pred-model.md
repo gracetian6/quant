@@ -25,7 +25,7 @@ significant drop in variance.
 ***Minimizes sum of squared residuals + lambda * slope^2***
 - slope^2 adds a penalty to traditional least squares method
 - lambda determines how severe the penalty is
-- the larger we make lambda, slope gets asymptotically close to 0
+- the larger we make lambda, slope gets asymptotically close to 0 ("shrinks paramaters")
 
 To determine value for lambda, try a bunch of values and use cross validation (10-fold cross validation) to determine
 which one results in the lowest variance. 
@@ -34,6 +34,14 @@ What do we do if we have an equation with 10,001 parameters and only 500 data po
 ridge regresison penalty, we can solve for all 10,001 parameters and only 500 samples. Ridge 
 Regression can find solution with cross validation and ridge regression penalty that favors small parameter
 values.
+
+### Lasso (L1) Regression
+***Minimizes sum of squared residuals + lambda * |slope|***
+
+Diff in shrinkage: Ridge regression can shrink the slope asymptotically close to 0 while _Lasso can shrink
+the slope all the way to 0_. Since Lasso Regression can exclude useless variables form equations, it is a little better
+than Ridge at reducing variance in models that contain a lot of useless variables. So, Ridge tends to do better 
+when most variables are useful.
 
 ## Cross Validation
 
@@ -55,3 +63,4 @@ Variants: Leave One Out Cross Validation (everyone is a block), 10-fold cross va
 - Classification & Regression: https://machinelearningmastery.com/classification-versus-regression-in-machine-learning/
 - Cross Validation: https://www.youtube.com/watch?v=fSytzGwwBVw by StatQuest with Josh Starner
 - Ridge Regression: https://www.youtube.com/watch?v=Q81RR3yKn30 by StatQuest with Josh Starner
+- Lasso Regression: https://www.youtube.com/watch?v=NGf0voTMlcs&t=34s by StatQuest with Josh Starner
