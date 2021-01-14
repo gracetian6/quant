@@ -15,6 +15,25 @@ Approximates a mapping function (f) from input variables (X) to **continuous out
 Example: predicting how much a house is predicted to sell ($100k - $200k)
 Statistic: RMSE
 
+### Ridge (L2) Regression 
+Improves predictions made form new data (reduce variance) by making predictions less sensitive to the Training Data.
+
+Ridge regression finds a new line that doesn't fit the training data as well as least squares by introducing a small 
+amount of bias through penaly into how the new line is fit to the data. In return for small amount of bias, we get a 
+significant drop in variance. 
+
+***Minimizes sum of squared residuals + lambda * slope^2***
+- slope^2 adds a penalty to traditional least squares method
+- lambda determines how severe the penalty is
+- the larger we make lambda, slope gets asymptotically close to 0
+
+To determine value for lambda, try a bunch of values and use cross validation (10-fold cross validation) to determine
+which one results in the lowest variance. 
+
+What do we do if we have an equation with 10,001 parameters and only 500 data points? By adding 
+ridge regresison penalty, we can solve for all 10,001 parameters and only 500 samples. Ridge 
+Regression can find solution with cross validation and ridge regression penalty that favors small parameter
+values.
 
 ## Cross Validation
 
@@ -35,3 +54,4 @@ Variants: Leave One Out Cross Validation (everyone is a block), 10-fold cross va
 ### Sources
 - Classification & Regression: https://machinelearningmastery.com/classification-versus-regression-in-machine-learning/
 - Cross Validation: https://www.youtube.com/watch?v=fSytzGwwBVw by StatQuest with Josh Starner
+- Ridge Regression: https://www.youtube.com/watch?v=Q81RR3yKn30 by StatQuest with Josh Starner
