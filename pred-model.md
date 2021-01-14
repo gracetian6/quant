@@ -59,8 +59,12 @@ at the end. In the end, every block of data is used for testing and we can compa
 
 Variants: Leave One Out Cross Validation (everyone is a block), 10-fold cross validation
 
+## AUC and ROC
+ROC curves make it easy to identify the best threshold for making a decision (i.e. whether threshold for obesity should prob of 0.9 or 0.5). 
+The AUC (area under curve) can help you determine which categorization method is better. (Larger AUC is better). 
 ### Sources
 - Classification & Regression: https://machinelearningmastery.com/classification-versus-regression-in-machine-learning/
 - Cross Validation: https://www.youtube.com/watch?v=fSytzGwwBVw by StatQuest with Josh Starner
 - Ridge Regression: https://www.youtube.com/watch?v=Q81RR3yKn30 by StatQuest with Josh Starner
 - Lasso Regression: https://www.youtube.com/watch?v=NGf0voTMlcs&t=34s by StatQuest with Josh Starner
+- AUC and ROC: https://www.youtube.com/watch?v=4jRBRDbJemM by StatQuest with Josh Starner
