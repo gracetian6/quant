@@ -17,3 +17,7 @@ The AUC (area under curve) can help you determine which categorization method is
 Con: Can't interpret predictions as probabilities because AUC is determined by rankings, so can't explain uncertainty of model.
 
 ### SVM
+
+### Sources 
+- AUC and ROC: https://www.youtube.com/watch?v=4jRBRDbJemM by StatQuest with Josh Starner
+- Logistic Regression: https://www.youtube.com/watch?v=yIYKR4sgzI8 by StatQuest with Josh Starner
