@@ -1,0 +1,51 @@
+---
+title: "dplyr"
+author: "Grace Tian"
+date: "1/15/2021"
+output: pdf_document
+---
+
+```{r}
+data <- data.frame(x1 = 1:6,
+                   x2 = c(1, 2, 2, 3, 1, 2),
+                   x3 = c("F", "B", "C", "E", "A", "D"))
+data
+```
+
+```{r}
+library("dplyr")
+```
+
+```{r}
+# arrange function orders the rows of data frame according to a certain column
+# now arranged in alphabetical order according to x3
+arrange(data, x3)
+```
+```{r}
+# filters data based on logical condition x2 == 2
+filter(data, x2 == 2) 
+```
+
+```{r}
+# mutate adds new variables 
+mutate(data, x4 = x1+x2)
+```
+```{r}
+# extracts column from data frame and turns it into a vector
+pull(data, x2)
+```
+
+```{r}
+# changes the names of a column in data frame
+rename(data, new_name = x3)
+```
+```{r}
+# random sub sample of original data frame
+set.seed(765) # ensures reproducibility
+sample_n(data, 3)
+```
+```{r}
+# subset of columns 
+select(data, c(x1, x2))
+```
+
