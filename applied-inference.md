@@ -1,10 +1,12 @@
 # Applied Statistical Inference
 
-Inference: Use the model to learn about the data generation process. (Model interpretability is a necessity for inference) 
-- understand how ozone levels are influenced by temperature, solar radiation, and wind
+**Inference**: Use the model to learn about the data generation process. (Model interpretability is a necessity for inference) 
+- understand how ozone levels are influenced by temperature, solar radiation, and wind. 
+- Goal is to explain data set as accurately as possible (so unbiased parameters good) 
 
-Prediction: Use the model to predict the outcomes for new data points.
+**Prediction**: Use the model to predict the outcomes for new data points.
 - predict future ozone levels using historic data
+- Unbiased estimators not favored due to bias variance tradeoff, prioritize generalizability and avoid overfitting
 
 ## Tests
 - A/B test drives traffic to two different pages (control/variation) to see which version converts better
