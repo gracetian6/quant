@@ -1,12 +1,10 @@
 # Applied Statistical Inference
 
-Inference: Given a set of data you want to infer how the output is generated as a function of the data.
+Inference: Use the model to learn about the data generation process. (Model interpretability is a necessity for inference) 
+- understand how ozone levels are influenced by temperature, solar radiation, and wind
 
-Prediction: Given a new measurement, you want to use an existing data set to build a model that reliably chooses the correct identifier from a set of outcomes.
-
-Inference: You want to find out what the effect of Age, Passenger Class and, Gender has on surviving the Titanic Disaster. You can put up a logistic regression and infer the effect each passenger characteristic has on survival rates.
-
-Prediction: Given some information on a Titanic passenger, you want to choose from the set {lives,dies} and be correct as often as possible. (See bias-variance tradeoff for prediction in case you wonder how to be correct as often as possible.)
+Prediction: Use the model to predict the outcomes for new data points.
+- predict future ozone levels using historic data
 
 ## Tests
 - A/B test drives traffic to two different pages (control/variation) to see which version converts better
@@ -32,4 +30,4 @@ each other instead of two different pages.
 ### Sources:
 - A/B test https://vwo.com/ab-testing/
 - https://github.com/kojino/120-Data-Science-Interview-Questions/blob/master/statistical-inference.md
-- Inference vs Prediction: https://stats.stackexchange.com/questions/244017/what-is-the-difference-between-prediction-and-inference#:~:text=Inference%3A%20Given%20a%20set%20of,from%20a%20set%20of%20outcomes.
+- Inference vs Prediction: https://www.datascienceblog.net/post/commentary/inference-vs-prediction/
