@@ -16,7 +16,7 @@ Approximates a mapping function (f) from input variables (X) to **continuous out
 Example: predicting how much a house is predicted to sell ($100k - $200k)
 Statistic: RMSE
 
-### Ridge (L2) Regression 
+### Ridge (L2) Regression (squared penalty)
 Improves predictions made form new data (reduce variance) by making predictions less sensitive to the Training Data.
 
 Ridge regression finds a new line that doesn't fit the training data as well as least squares by introducing a small 
@@ -35,17 +35,25 @@ What do we do if we have an equation with 10,001 parameters and only 500 data po
 ridge regresison penalty, we can solve for all 10,001 parameters and only 500 samples. Ridge 
 Regression can find solution with cross validation and ridge regression penalty that favors small parameter
 values.
+- works better when most variables are useful
+- tends to shrink all parameters for correlated variables together
 
-### Lasso (L1) Regression
+### Lasso (L1) Regression (abs value penalty)
 ***Minimizes sum of squared residuals + lambda * |slope|***
 
 Diff in shrinkage: Ridge regression can shrink the slope asymptotically close to 0 while _Lasso can shrink
 the slope all the way to 0_. Since Lasso Regression can exclude useless variables form equations, it is a little better
 than Ridge at reducing variance in models that contain a lot of useless variables. So, Ridge tends to do better 
 when most variables are useful.
+- works best when model contains a lot of useless variables
+- tends to pick just one of correlated terms and eliminates others
 
 ### Elastic Net Regression
 Elastic-Net Regression is combines Lasso Regression with Ridge Regression to give you the best of both worlds. It works well when there are lots of useless variables that need to be removed from the equation and it works well when there are lots of useful variables that need to be retained. And it does better than either one when it comes to handling correlated variables
+
+- combines lasso regression penalty with ridge regression penalty
+***Minimizes sum of squared residuals + lambda1 * |slope| + lambda2 * slope^2***
+- good at dealing with situations with correlations between parameters
 
 ## Cross Validation
 
@@ -71,3 +79,4 @@ Variants: Leave One Out Cross Validation (everyone is a block), 10-fold cross va
 - AUC and ROC: https://www.youtube.com/watch?v=4jRBRDbJemM by StatQuest with Josh Starner
 - Logistic Regression: https://www.youtube.com/watch?v=yIYKR4sgzI8 by StatQuest with Josh Starner
 - Elastic Net Regression: https://www.youtube.com/watch?v=1dKRdX9bfIo by StatQuest with Josh Starner
+- Ridge vs. Lasso Regression, Visualized!!! https://www.youtube.com/watch?v=Xm2C_gTAl8c by StatQuest with Josh Starner
