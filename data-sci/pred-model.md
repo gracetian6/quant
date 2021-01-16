@@ -44,6 +44,9 @@ the slope all the way to 0_. Since Lasso Regression can exclude useless variable
 than Ridge at reducing variance in models that contain a lot of useless variables. So, Ridge tends to do better 
 when most variables are useful.
 
+### Elastic Net Regression
+Elastic-Net Regression is combines Lasso Regression with Ridge Regression to give you the best of both worlds. It works well when there are lots of useless variables that need to be removed from the equation and it works well when there are lots of useful variables that need to be retained. And it does better than either one when it comes to handling correlated variables
+
 ## Cross Validation
 
 Cross Validation allows us to compare different machine learning methods and get a sense of how well they
@@ -67,3 +70,4 @@ Variants: Leave One Out Cross Validation (everyone is a block), 10-fold cross va
 - Lasso Regression: https://www.youtube.com/watch?v=NGf0voTMlcs&t=34s by StatQuest with Josh Starner
 - AUC and ROC: https://www.youtube.com/watch?v=4jRBRDbJemM by StatQuest with Josh Starner
 - Logistic Regression: https://www.youtube.com/watch?v=yIYKR4sgzI8 by StatQuest with Josh Starner
+- Elastic Net Regression: https://www.youtube.com/watch?v=1dKRdX9bfIo by StatQuest with Josh Starner
