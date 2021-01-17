@@ -24,6 +24,7 @@ amount of bias through penaly into how the new line is fit to the data. In retur
 significant drop in variance. 
 
 ***Minimizes sum of squared residuals + lambda * slope^2***
+
 - slope^2 adds a penalty to traditional least squares method
 - lambda determines how severe the penalty is
 - the larger we make lambda, slope gets asymptotically close to 0 ("shrinks paramaters")
@@ -39,6 +40,7 @@ values.
 - tends to shrink all parameters for correlated variables together
 
 ### Lasso (L1) Regression (abs value penalty)
+
 ***Minimizes sum of squared residuals + lambda * |slope|***
 
 Diff in shrinkage: Ridge regression can shrink the slope asymptotically close to 0 while _Lasso can shrink
@@ -51,8 +53,9 @@ when most variables are useful.
 ### Elastic Net Regression
 Elastic-Net Regression is combines Lasso Regression with Ridge Regression to give you the best of both worlds. It works well when there are lots of useless variables that need to be removed from the equation and it works well when there are lots of useful variables that need to be retained. And it does better than either one when it comes to handling correlated variables
 
-- combines lasso regression penalty with ridge regression penalty
 ***Minimizes sum of squared residuals + lambda1 * |slope| + lambda2 * slope^2***
+
+- combines lasso regression penalty with ridge regression penalty
 - good at dealing with situations with correlations between parameters
 
 ## Cross Validation
