@@ -19,7 +19,7 @@
 ```data.merge(data, ...)```
 for hierarchical, sequential graph data etc
 
-##ARGUMENTS
+## ARGUMENTS
 - on, left_on, right_on
 - how ("left", "right", "inner", 
 - suffixes=('_1', '_2')
