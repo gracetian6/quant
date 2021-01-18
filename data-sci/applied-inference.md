@@ -27,7 +27,12 @@ each other instead of two different pages.
 - MOM: solves for parameters for moments. More naive, not used over MLE since MLE more often unbiased 
 
 ### Confidence Interval
-- 95% CI: Interval that contains true mean 95% of the time (assuming randomn sampling) 
+- 95% CI: Interval that contains true mean 95% of the time (assuming random sampling) 
+
+### P-value, Type 1 & 2
+- p-val: given null hypohtesis is true, its the fraction of events with parameters values more extreme than observed parameter
+- type 1: reject null when it's true
+- type 2: accept (fail to reject) null when it's false
 
 ### Sources:
 - A/B test https://vwo.com/ab-testing/
