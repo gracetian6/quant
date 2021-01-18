@@ -12,3 +12,14 @@
 
 ## FULL join
 - returns connected rows and unconnected rows from both left and right tables
+
+## OUTER join
+
+## self merge
+```data.merge(data, ...)```
+for hierarchical, sequential graph data etc
+
+##ARGUMENTS
+- on, left_on, right_on
+- how ("left", "right", "inner", 
+- suffixes=('_1', '_2')
