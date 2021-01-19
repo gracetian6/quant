@@ -8,7 +8,7 @@ You use that to calculate the likelihood for all the data points and multiply al
 you calculate many likelihoods and select curve w the maximum likelihood for the logistic curve.
 
 
-### AUC and ROC for Binary Classifiers
+### AUC and ROC for measure how good a Binary Classifier
 ROC curves make it easy to identify the best threshold for making a decision (i.e. whether threshold for obesity should prob of 0.9 or 0.5). 
 Plots false positive rate on x axis and true positive rate on y axis. 
 
