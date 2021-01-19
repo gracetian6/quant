@@ -4,6 +4,7 @@
 - how ("left", "right", "inner", 
 - suffixes=('_1', '_2')
 
+#### Join Types
 - inner join: only returns connected matching rows
 `data1.merge(data2, on="col")`
 
@@ -21,3 +22,10 @@
 ## Query 
 - sql queries in python
 - `stocks.query('nike > 90 and disney < 140')` 
+- `gdp_pivot.query('date >= "1991-01-01"')`
+
+## Pivot Tables 
+```
+# Pivot data so gdp_per_capita, where index is date and columns is country
+gdp_pivot = gdp_pop.pivot_table('gdp_per_capita', 'date', 'country')
+```
