@@ -16,8 +16,10 @@ Approximates a mapping function (f) from input variables (X) to **continuous out
 Example: predicting how much a house is predicted to sell ($100k - $200k)
 Statistic: RMSE
 
+**Regularization makes things regular or acceptable. In ML, it regularizes or shrinks coefficients towards 0. It discourages learning a more complex or flexible model to prevent overfitting.** 
+
 ### Ridge (L2) Regression (squared penalty)
-Improves predictions made form new data (reduce variance) by making predictions less sensitive to the Training Data.
+Improves predictions made from new data (reduce variance) by making predictions less sensitive to the Training Data.
 
 Ridge regression finds a new line that doesn't fit the training data as well as least squares by introducing a small 
 amount of bias through penaly into how the new line is fit to the data. In return for small amount of bias, we get a 
@@ -74,6 +76,21 @@ at the end. In the end, every block of data is used for testing and we can compa
 
 Variants: Leave One Out Cross Validation (everyone is a block), 10-fold cross validation
 
+## Dealing with Outliers
+How to make model more robust to outliers?
+- L1/L2 regularization (penalizes large terms / coefficients so impact on outliers is curtailed)
+- Changes to Algorithm:
+   - Tree Based Methods instead of regression methods (more resistant to outliers)
+   - Statistical Tests: non parametric tests instead of parametric ones
+   - Robust error metrics (MAE or Huber Loss instead of MSE)
+- Changes to data:
+  - winsorizing data (limiting extreme values to reduce effect of spurious outliers)
+    - extreme values are replaced by certain percentiles (max/min percentiles) instead of discarded/trimmed 
+  - transforming data (e.g. log)
+  - remove outliers only if you're certain they're anomalies not worth predicting
+  
+
+
 ### Sources
 - Classification & Regression: https://machinelearningmastery.com/classification-versus-regression-in-machine-learning/
 - Cross Validation: https://www.youtube.com/watch?v=fSytzGwwBVw by StatQuest with Josh Starner
@@ -83,3 +100,4 @@ Variants: Leave One Out Cross Validation (everyone is a block), 10-fold cross va
 - Logistic Regression: https://www.youtube.com/watch?v=yIYKR4sgzI8 by StatQuest with Josh Starner
 - Elastic Net Regression: https://www.youtube.com/watch?v=1dKRdX9bfIo by StatQuest with Josh Starner
 - Ridge vs. Lasso Regression, Visualized!!! https://www.youtube.com/watch?v=Xm2C_gTAl8c by StatQuest with Josh Starner
+- Regularization Meaning: https://www.edureka.co/blog/regularization-in-machine-learning/#:~:text=In%20general%2C%20regularization%20means%20to%20make%20things%20regular%20or%20acceptable.&text=In%20the%20context%20of%20machine,flexible%20model%2C%20to%20prevent%20overfitting.
