@@ -7,6 +7,12 @@ As the number of features or dimensions grows, the amount of data we need to gen
 Too many dimensions causes every observation in your dataset to appear equidistant form all the others. 
 Clustering is important because it quantifies the similarity between observations... 
 
+### Methods for Dimension Reduction
+- PCA
+- heatmaps
+- t-SNE plots
+- multi-dimensional scaling (MDS)
+
 ## More Data?
 Statistically - having more data doesn't help. Also, if model has high bias, then getting more data doesn't improve the fundamental problems of model.
 There are also issues with storage, memory, etc. 
@@ -23,8 +29,15 @@ Balance of the two prevents you from wasting too much time on things that end up
 - variables added in forward variable selection
 - select variables with LASSO -- forces coefficients of "not-so-signficant" variables to become 0 through penalty
 
-## Multi-collinearity 
-- use principal component analysis (PCA) to resolve the issue 
+## PCA 
+Principal Component Analysis (PCA) plot converts the correlations (or lack there of) among all the cells into a 2D graph.
+Then find clusters within the graph (should be able to see clusters)
+
+Graph with PC1 as x axis and PC2 as y axis. PC1 is the best fitted line through the origin that fits data where center of mass is at origin. PC2 is the line through the origin. Keep adding more and more principal components that are perpendicular. 
+
+Then calculate proportion fo variation each PC (principal component) accounts for.
+
+A way for  **dimension reduction**!
 
 ## Random Forests
 Random Forests combine simplicity of decision trees with flexibility resulting in a vast improvement in accuracy. 
@@ -33,7 +46,7 @@ Process: Bootstrapped sample, subset of variables at each step for tree, so many
 To predict data, we run the data for all the trees we have to determine whether patient has heart disease or not. 
 
 Bagging: Bootstrapping the data + using aggregate to make decision. Use this data to test whether all the other trees are good / correctly label
-the data set. Accuracy of our random forest is determined by proportion of out of bag samples that were correctly classified by random forest.
+ the data set. Accuracy of our random forest is determined by proportion of out of bag samples that were correctly classified by random forest.
 
 Out of Bag Dataset: Data set entries that were not selected in bootstrap. 
 
