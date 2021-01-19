@@ -29,6 +29,12 @@ Balance of the two prevents you from wasting too much time on things that end up
 - variables added in forward variable selection
 - select variables with LASSO -- forces coefficients of "not-so-signficant" variables to become 0 through penalty
 
+### Feature Selection (don't need all predictors)
+Do 
+- ridge / lasso / elastic net regression
+- univariate feature selection
+  - examines each feature individually to determine the strength of the relationship of the feature with the response variable
+
 ## PCA 
 Principal Component Analysis (PCA) plot converts the correlations (or lack there of) among all the cells into a 2D graph.
 Then find clusters within the graph (should be able to see clusters)
@@ -70,3 +76,4 @@ sample that was correctly labeled more in the random forest.
 - Curse of Dimensionality: https://towardsdatascience.com/the-curse-of-dimensionality-50dc6e49aa1e?gi=ac56e4ff5cdd
 - Lasso Variable Selection: https://towardsdatascience.com/variable-selection-using-lasso-493ac2e5660d
 - Random Forest: https://www.youtube.com/watch?v=J4Wdy0Wc_xQ
+- Univariate Feature Selection: https://blog.datadive.net/selecting-good-features-part-i-univariate-selection/#:~:text=Univariate%20feature%20selection,feature%20with%20the%20response%20variable.
