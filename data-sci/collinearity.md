@@ -12,5 +12,7 @@ Confounding: important predictor (when omitted) leads to spurious relationships 
 - beta coefficients not accurately estimated, standard errors are large
 - Predictors with strong known relationship won't be accurately estimated 
 
+### Use PCA to resolve multi-collinearity
+
 ## Sources
 - Confounding: http://www.medicine.mcgill.ca/epidemiology/Joseph/courses/EPIB-621/confounding.pdf
