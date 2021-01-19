@@ -50,6 +50,8 @@ about the missing data.
 Use iterative method above to fill in missing values for predictors. Test the same data row with YES and NO separately for heart disease, choose the 
 sample that was correctly labeled more in the random forest. 
 
+### Random Forests more resistant to outliers! 
+
 ## Sources
 - https://www.youtube.com/watch?v=QZ0DtNFdDko
 - Curse of Dimensionality: https://towardsdatascience.com/the-curse-of-dimensionality-50dc6e49aa1e?gi=ac56e4ff5cdd
