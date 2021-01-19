@@ -29,3 +29,9 @@
 # Pivot data so gdp_per_capita, where index is date and columns is country
 gdp_pivot = gdp_pop.pivot_table('gdp_per_capita', 'date', 'country')
 ```
+
+Unpivot table
+```
+# unpivot everything besides the year column
+ur_tall = ur_wide.melt(id_vars=['year'], var_name='month', value_name='unempl_rate')
+```
