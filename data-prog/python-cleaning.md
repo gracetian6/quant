@@ -1,0 +1,23 @@
+## Join functions
+#### Join Arguments for merge function
+- on, left_on, right_on
+- how ("left", "right", "inner", 
+- suffixes=('_1', '_2')
+
+- inner join: only returns connected matching rows
+`data1.merge(data2, on="col")`
+
+- left join: returns all connected rows and unconnected rows from left table (nulls in right)
+`data1.merge(data2, on="col", how="left")`
+
+- right join: returns all connected rows and unconnected rows from right table (nulls in left)
+`data1.merge(data2, on="col", how="right")`
+
+- full join: returns connected rows and unconnected rows from both left and right tables
+
+- outer join
+- self merge: ```data.merge(data, ...)``` for hierarchical, sequential graph data etc
+
+## Query 
+- sql queries in python
+- `stocks.query('nike > 90 and disney < 140')` 
