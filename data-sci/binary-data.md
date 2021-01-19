@@ -23,6 +23,11 @@ us the largest margin to make classifications, we are using the maximal marginal
 
 Support Vector Classifier comes from the fact that the observations on the edge and within the soft margin are called support vectors.
 
+### Naive Bayes
+
+### Decision Tree
+
+## Deep Learning 
 
 ### Sources 
 - AUC and ROC: https://www.youtube.com/watch?v=4jRBRDbJemM by StatQuest with Josh Starner
