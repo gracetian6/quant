@@ -8,7 +8,7 @@
 - predict future ozone levels using historic data
 - Unbiased estimators not favored due to bias variance tradeoff, prioritize generalizability and avoid overfitting
 
-## Tests
+## A/B Tests
 - A/B test drives traffic to two different pages (control/variation) to see which version converts better
 - A/A test also drives traffic to two pages to see which performs better. Pits 2 identical pages against
 each other instead of two different pages. 
@@ -18,6 +18,15 @@ each other instead of two different pages.
 ## Testing Randomness
 - plot distributions to see if same shape
 - permutation test to see if distributions are the same 
+
+## Bias Variance Tradeoff
+**Bias**:  inability for ML method to capture the true relationship.
+- Ex: straight line to curved dataset has a lot of bias. Squiggly line that touches all the points has very bias of 0. However, squiggly line is a lot worse for the test set.
+
+**Variance**: the difference in fits between data sets (train and test). 
+- A dataset has high variability if it results in vastly different sums of squares for different datasets. Straight line has low variance because sums of squares are similar for test and train dataset. Will give consistently good predictions (but not great). 
+
+To get low bias and low variance, need to find the sweet spot. This can be done with regularizaiton, boosting, and bagging (rf).
 
 ## Likelihood / MLE
 - Likelihood: how likely outcome would happen given current data and model
