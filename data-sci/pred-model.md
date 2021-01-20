@@ -16,6 +16,17 @@ Approximates a mapping function (f) from input variables (X) to **continuous out
 Example: predicting how much a house is predicted to sell ($100k - $200k)
 Statistic: RMSE
 
+### Conditions of Linear Regression
+- Linearity
+- Homoscedasticity
+- Independence (sample design)
+- Normality
+
+When thinking of conditions, think about formula for linear regression. Y = beta0 + beta1 * X + eps where eps ~ N(0, sigma^2). 
+
+If conditions aren't met, then can use robust regression.
+
+
 **Regularization makes things regular or acceptable. In ML, it regularizes or shrinks coefficients towards 0. It discourages learning a more complex or flexible model to prevent overfitting.** 
 
 ### Ridge (L2) Regression (squared penalty)
