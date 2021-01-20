@@ -78,3 +78,17 @@ Ex: Let's say you have a very tall father. On average, what would you expect the
 - Ans: For tall father, Expected height of son is shorter 
 
 TODO find theoretical intutiion
+
+## Expectations via Recurrences
+16. What’s the expected number of coin flips until you get two heads in a row? What’s the expected number of coin flips until you get two tails in a row?
+
+Do it case by case. First head ~ FS(1/2). So expected 2 flips to get a head. 
+
+- E[X] = 2 + 1/2(1) + 1/2(1 + EX)
+  - first, given that we have a head 
+  - first 2 is to get a head
+  - 1/2(1) is the case where we flip another head next, just need one more flip
+  - 1/2(1 + EX) is the case where we flip another tail. This takes 1 flip and we restart again so +EX
+
+- Can also approach with Markov Chain
+- Other Ex: Gambler's Ruin
