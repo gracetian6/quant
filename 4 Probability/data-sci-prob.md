@@ -46,3 +46,15 @@ Ex: splitting 12 people into 3 teams of 4
 
 Ex: 100 students sorted into 4 houses with equal probability
 - number ppl in each house ~ Mult_4(100, [1/4, 1/4, 1/4, 1/4])
+
+## Birthday Problem (Hash Collisions)
+
+10. Your hash function assigns each object to a number between 1:10, each with equal probability. With 10 objects, what is the probability of a hash collision? What is the expected number of hash collisions? What is the expected number of hashes that are unused.
+
+- do complementary counting step by step
+- Prob of hash collision: 1 - (10!/10^10)
+- Prob Bin 1 is empty = (1-1/10)^10 = (9/10)^10
+- Expected number of hash collisions: 1-10*(9/10)^10
+  - E[empty bins] = 10 * (9/10)^10
+    - using linearity of expectation and prob above that bin 1 is empty
+    - this is also E[unused hashes]
