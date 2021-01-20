@@ -58,3 +58,23 @@ Ex: 100 students sorted into 4 houses with equal probability
   - E[empty bins] = 10 * (9/10)^10
     - using linearity of expectation and prob above that bin 1 is empty
     - this is also E[unused hashes]
+
+## Matching Socks / Uber & Lyft
+- do it case by case, consider one car at a time.
+
+2 Uber, 3 Lyft. 
+What's probability that all lyft arrive first? 
+- 3/5 * 2/4 * 1/3
+
+What's probability that all Uber arrive first?
+- 2/5 * 1/4 = 1/10
+
+## Drunk Passenger
+
+## Regression to mean
+If a sample point of a random variable is extreme (nearly an outlier), a future point will be closer to mean or average on further measurements. 
+
+Ex: Let's say you have a very tall father. On average, what would you expect the height of his son to be? Taller, equal or shorter? What if you had a very short father? 
+- Ans: For tall father, Expected height of son is shorter 
+
+TODO find theoretical intutiion
