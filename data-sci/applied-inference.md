@@ -29,7 +29,11 @@ each other instead of two different pages.
 To get low bias and low variance, need to find the sweet spot. This can be done with regularizaiton, boosting, and bagging (rf).
 
 ## Likelihood / MLE
-- Likelihood: how likely outcome would happen given current data and model
+- Likelihood: how likely the outcome would happen given current data and model
+  - probabilities are the areas under a fixed distribution 
+    - Pr(data | dist)
+  - Likelihoods are the y axis values for fixed data points with distributions that can be moved 
+    - L(dist | data)
 - MLE: finds best parameter that optimizes likelihood
   - doesn't exist for gaussian mixtures, non parametric models
 - MAP: generalized version of MLE where MLE assumes uniform prior distribution of parameters. 
