@@ -35,3 +35,14 @@ X ~ FS(p); X is the number of **failures that we will achieve including our firs
   - gender ratio is 1:1, expect number of children is 2.
   - Let X be the number of children until getting a female (happens with prob 1/2). This follows a first success distribution with probability 1/2
 
+
+## Multinomial Dist
+- Mult_k(n, p)
+- n items which can fall into any one of k buckets independent with prob p=(p_1,...,p_k)
+
+Ex: splitting 12 people into 3 teams of 4
+- (12!)/(4! 4! 4!) ways
+- Multinomial distribution with n=12, k=3 (this is when classes are indistinguishable)
+
+Ex: 100 students sorted into 4 houses with equal probability
+- number ppl in each house ~ Mult_4(100, [1/4, 1/4, 1/4, 1/4])
