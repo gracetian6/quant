@@ -42,6 +42,8 @@ To get low bias and low variance, need to find the sweet spot. This can be done 
 - p-val: given null hypohtesis is true, its the fraction of events with parameters values more extreme than observed parameter
 - type 1: reject null when it's true
 - type 2: accept (fail to reject) null when it's false
+- power: probability that we correctly reject the null hypothesis. Large power is good (i.e. more powerful)
+  - can increase power by increasing the sample size
 
 ### Sources:
 - A/B test https://vwo.com/ab-testing/
