@@ -23,3 +23,10 @@ plt.xlabel('Age at conception')
 plt.ylabel('Number of pregnances')
 plt.show()
 ```
+
+### Normal CDF
+```
+from scipy.stats import norm
+xs = np.linspace(-3, 3)
+ys = norm(0, 1).cdf(xs)
+```
