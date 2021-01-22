@@ -52,6 +52,7 @@ plt.show()
 ```
 
 ### Plotting PMF
+- use empircaldist library
 ```
 # Extract age
 age = brfss['AGE']
@@ -132,7 +133,7 @@ results = smf.ols('realinc ~ educ + educ2 + age + age2', data=gss).fit()
 results.params
 ```
 
-#### Predictions
+### Predictions
 ```
 # Make the DataFrame
 df = pd.DataFrame()
@@ -145,3 +146,7 @@ df['age2'] = df['age']**2
 pred = results.predict(df)
 print(pred.head())
 ```
+
+### Logistic Regression
+- `results = smf.logit(...).fit()`
+- positive params => more likely, negative params => less likely
