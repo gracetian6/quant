@@ -103,7 +103,7 @@ plt.show()
 ```
 
 
-### Regression
+## Regression
 ```
 from scipy.stats import linregress
 res = linregress(xs, ys)
@@ -123,4 +123,11 @@ plt.xlabel('Income code')
 plt.ylabel('Vegetable servings per day')
 plt.ylim([0, 6])
 plt.show()
+```
+
+### Multiple Regression
+```
+import statsmodels.formula.api as smf
+results = smf.ols('INCOME2 ~ _VEGESU1', data=brfss).fit()
+results.params
 ```
