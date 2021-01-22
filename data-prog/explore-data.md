@@ -31,3 +31,21 @@ xs = np.linspace(-3, 3)
 ys = norm(0, 1).cdf(xs)
 plt.plot(xs, ys, color='gray')
 ```
+
+```
+# Evaluate the model CDF
+xs = np.linspace(2, 5.5)
+ys = dist.cdf(xs)
+
+# Plot the model CDF
+plt.clf()
+plt.plot(xs, ys, color='gray')
+
+# Create and plot the Cdf of log_income
+Cdf(log_income).plot()
+    
+# Label the axes
+plt.xlabel('log10 of realinc')
+plt.ylabel('CDF')
+plt.show()
+```
