@@ -29,4 +29,5 @@ plt.show()
 from scipy.stats import norm
 xs = np.linspace(-3, 3)
 ys = norm(0, 1).cdf(xs)
+plt.plot(xs, ys, color='gray')
 ```
