@@ -32,3 +32,12 @@ print(reg.score(X_fertility, y))
 plt.plot(prediction_space, y_pred, color='black', linewidth=3)
 plt.show()
 ```
+
+### Cross Validation
+```
+from sklearn.model_selection import cross_val_score
+
+# Perform 3-fold CV
+cvscores_3 = cross_val_score(reg, X, y, cv=3)
+print(np.mean(cvscores_3))
+```
