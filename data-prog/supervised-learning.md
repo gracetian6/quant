@@ -51,7 +51,7 @@ from sklearn.linear_model import Lasso
 lasso = Lasso(alpha=0.4, normalize=True)
 
 # Compute and print the coefficients
-lasso_coef = asso.fit(X, y).coef_
+lasso_coef = lasso.fit(X, y).coef_
 print(lasso_coef)
 
 # Plot the Lasso coefficients
