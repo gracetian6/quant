@@ -60,3 +60,11 @@ plt.xticks(range(len(df_columns)), df_columns.values, rotation=60)
 plt.margins(0.02)
 plt.show()
 ```
+
+### Ridge
+```
+from sklearn.linear_model import Ridge
+
+# Create a ridge regressor: ridge
+ridge = Ridge(normalize=True)
+```
