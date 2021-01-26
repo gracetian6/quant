@@ -8,3 +8,8 @@ AI > ML > Deep Learning
 
 ## Back Propagation
 - starts with last parameter, and works its way backwards to estimate all other parameters
+
+## Activation Function
+Activation functions are non-linear functions which are inserted in each layer of the neural network, making neural networks nonlinear and allowing them to deal with highly non-linear datasets, thus making them much more powerful.
+- ReLu(x) = max(0, x); `nn.ReLU()`
+
