@@ -122,6 +122,6 @@ print("Best score is {}".format(logreg_cv.best_score_))
 # Preprocessing Data
 ## Categorical features 
 - scikit-learn: `OneHotEncoder()`
-- pandas: `get_dummies()`
+- pandas: `pd.get_dummies(df, drop_first=True)`
 
 If you have 3 categories, make sure to drop 1 category so you have 2 dummies.
