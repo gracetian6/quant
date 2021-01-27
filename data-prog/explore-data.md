@@ -10,6 +10,8 @@
 ## Cleaning / Validating
 - `nsfg['nbrnaliv'].replace(8, np.nan, inplace=True)`
 - `data.dropna()`
+- mean imputation: `data.fillna(data.mean(), inplace=True)`
+
 
 ## Filtering
 - `preterm_weight = birth_weight[preterm]
