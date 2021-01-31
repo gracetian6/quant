@@ -26,3 +26,9 @@ so_survey_df['Paid_Job'] = 0
 so_survey_df.loc[so_survey_df['ConvertedSalary'] > 0, 'Paid_Job'] = 1
 print(so_survey_df[['Paid_Job', 'ConvertedSalary']].head())
 ```
+
+## Missing Values
+- drop all rows with >=1 missing values: `df.dropna(how=‘any’)` 
+- drop rows with na values in col: `df.dropna(subset=[‘VersionControl’])` 
+- filling na: `df[‘VersionControl’].fillna(value=‘None Given’, inplace=True)`
+- dropping cols: `df.drop(columns=[‘ConvertedSalary’])`
