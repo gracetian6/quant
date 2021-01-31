@@ -32,6 +32,7 @@ print(so_survey_df[['Paid_Job', 'ConvertedSalary']].head())
 - drop rows with na values in col: `df.dropna(subset=[‘VersionControl’])` 
 - filling na: `df[‘VersionControl’].fillna(value=‘None Given’, inplace=True)`
 - dropping cols: `df.drop(columns=[‘ConvertedSalary’])`
+- NOTE: values calculated on the train test should be applied to both train and test.
 
 ### Stray Characters
 ```
