@@ -59,15 +59,9 @@ print(so_survey_df['RawSalary'][idx])
 
 ### Visualize Dist
 histogram:
-```
-so_numeric_df.hist()
-plt.show()
-```
+`so_numeric_df.hist()` `plt.show()`
 boxplot:
-```
-so_numeric_df[['Age', 'Years Experience']].boxplot()
-plt.show()
-```
+`so_numeric_df[['Age', 'Years Experience']].boxplot()` `plt.show()`
 - don't forget double brackets
 
 ### Min Max Scaling
@@ -97,4 +91,16 @@ so_numeric_df['Age_SS'] = SS_scaler.transform(so_numeric_df[['Age']])
 
 # Compare the origional and transformed column
 print(so_numeric_df[['Age_SS', 'Age']].head())
+```
+### Log transform
+```
+from sklearn.preprocessing import PowerTransformer
+
+pow_trans = PowerTransformer()
+pow_trans.fit(so_numeric_df[['ConvertedSalary']])
+so_numeric_df['ConvertedSalary_LG'] = pow_trans.transform(so_numeric_df[['ConvertedSalary']])
+
+# Plot the data before and after the transformation
+so_numeric_df[['ConvertedSalary', 'ConvertedSalary_LG']].hist()
+plt.show()
 ```
