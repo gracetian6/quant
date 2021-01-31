@@ -32,3 +32,25 @@ print(so_survey_df[['Paid_Job', 'ConvertedSalary']].head())
 - drop rows with na values in col: `df.dropna(subset=[‘VersionControl’])` 
 - filling na: `df[‘VersionControl’].fillna(value=‘None Given’, inplace=True)`
 - dropping cols: `df.drop(columns=[‘ConvertedSalary’])`
+
+### Stray Characters
+```
+Replacing stray characters and converting to float:
+so_survey_df['RawSalary'] = so_survey_df['RawSalary']\
+                              .str.replace(',', '')\
+                              .str.replace('$', '')\
+                              .str.replace('£', '')\
+                              .astype('float')
+```                   
+
+To search for other stray characters to replace:
+```
+# Attempt to convert the column to numeric values
+numeric_vals = pd.to_numeric(so_survey_df['RawSalary'], errors='coerce')
+
+# Find the indexes of missing values
+idx = numeric_vals.isna()
+
+# Print the relevant rows
+print(so_survey_df['RawSalary'][idx])
+```
