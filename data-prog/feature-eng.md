@@ -58,17 +58,18 @@ print(so_survey_df['RawSalary'][idx])
 ## Standardizing Values
 
 ### Visualize Dist
-- histogram:
+histogram:
 ```
 so_numeric_df.hist()
 plt.show()
 ```
-- boxplot:
+boxplot:
 ```
 so_numeric_df[['Age', 'Years Experience']].boxplot()
 plt.show()
 ```
-  - don't forget double brackets
+- don't forget double brackets
+
 ### Min Max Scaling
 ```
 # Import MinMaxScaler
@@ -85,4 +86,15 @@ so_numeric_df['Age_MM'] = MM_scaler.transform(so_numeric_df[['Age']])
 
 # Compare the origional and transformed column
 print(so_numeric_df[['Age_MM', 'Age']].head())
+```
+### Normalization
+```
+from sklearn.preprocessing import StandardScaler 
+
+SS_scaler = StandardScaler()
+SS_scaler.fit(so_numeric_df[['Age']])
+so_numeric_df['Age_SS'] = SS_scaler.transform(so_numeric_df[['Age']])
+
+# Compare the origional and transformed column
+print(so_numeric_df[['Age_SS', 'Age']].head())
 ```
