@@ -6,10 +6,7 @@
 
 ### Uncommon Categories
 ```
-# Create a series out of the Country column
 countries = so_survey_df['Country']
-
-# Get the counts of each category
 country_counts = countries.value_counts()
 
 # Create a mask for only categories that occur less than 10 times
