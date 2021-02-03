@@ -88,10 +88,24 @@ from sklearn.model_selection import cross_val_score
 cv_scores3 = cross_val_score(reg, X, y, cv=3)
 print(cv_scores3) # looks consistent
 ```
+
 - Ridge/Lasso to pick better variables 
 ```
+# for specific alpha
 from sklearn.linear_model import Lasso
 
 lasso = Lasso(alpha = 0.4, normalize=True)
 lasso_coef = lasso.fit(X, y).coef_ # look at which vars are shrunk to 0
+```
+
+```
+CV to find best alpha
+from sklearn.linear_model import LassoCV
+lasso = LassoCV(alphas=None, cv=5, random_state=40, normalize=True, max_iter=10000)
+lasso.fit(X_train, y_train)
+
+pd.Series(lasso.coef_, index=X_train.columns)
+
+lasso.score(X_test, y_test)
+lasso.alpha_
 ```
