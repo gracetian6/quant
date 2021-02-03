@@ -179,3 +179,9 @@ grid_model_result = grid_model.fit(rescaledX, y)
 best_score, best_params = grid_model_result.best_score_, grid_model_result.best_params_
 print("Best: %f using %s" % (best_score, best_params))
 ```
+
+### Other models
+```
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
+```
