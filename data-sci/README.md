@@ -36,6 +36,9 @@ df.head()
 ```
 - Missing values: `train.isna().sum()`
 - numeric N/A
+```
+df['col'].replacena() # TODO check
+```
 - non numeric N/A
 - outliers
 ```
@@ -50,6 +53,7 @@ train.boxplot()
 ```
 train = pd.get_dummies(train, columns=['col1', 'col2'], drop_first=True)
 ```
+
 - `sklearn.preprocessing`
 - Date Time
 ```
@@ -61,12 +65,33 @@ train_date = train_date.rename(columns={0:"month", 1:"day", 2:"year"})
 - logistic for classification
 - regression for quantitative variables
   - consider linear regression assumptions, forward variable selection, transforming data/hist plots
-  
+
+```
+from sklearn.model_selection import train_test_split
+X = train[['col1', 'col2', 'col3']]
+y = train[['pred']]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.20, random_state=40)
+```
 7. Make predictions and evalute preformance
 - for logistic regression, do a confusion matrix
   - want high numbers on diagonals
-  
+```
+reg.score(X_test)
+```
 8. Find best performing model
-- Grid search to tune hyper parameters, pick the best lambdas
+- Grid search to tune hyper parameters, pick the best lambda
+
 - cross validation
+```
+from sklearn.model_selection import cross_val_score 
+
+cv_scores3 = cross_val_score(reg, X, y, cv=3)
+print(cv_scores3) # looks consistent
+```
 - Ridge/Lasso to pick better variables 
+```
+from sklearn.linear_model import Lasso
+
+lasso = Lasso(alpha = 0.4, normalize=True)
+lasso_coef = lasso.fit(X, y).coef_ # look at which vars are shrunk to 0
+```
