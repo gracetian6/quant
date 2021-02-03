@@ -50,11 +50,22 @@ df.head()
 .replace('?', np.nan)
 ```
 - Missing values: `train.isna().sum()`
-- numeric N/A
+- numeric N/A (mean imputation)
 ```
-df['col'].replacena() # TODO check
+cc_apps.fillna(cc_apps.mean(), inplace=True) 
 ```
 - non numeric N/A
+```
+# Iterate over each column of cc_apps
+for col in cc_apps.columns:
+    # Check if the column is of object type
+    if cc_apps[col].dtypes == 'object':
+        # Impute with the most frequent value
+        cc_apps = cc_apps.fillna(cc_apps[col].value_counts().index[0])
+
+# Count the number of NaNs in the dataset and print the counts to verify
+print(cc_apps.isnull().sum())
+```
 - outliers
 ```
 train = train.drop(np.where(train['sls'] > 300000)[0]) # the 0 index is important
