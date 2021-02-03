@@ -21,6 +21,21 @@ df[['col1', 'col2']].hist()
 ```train.boxplot(column='revenue', by='month')```
 
 - TODO scatterplot
+PAIR PLOT
+```
+import seaborn as sns
+sns.pairplot(train[['col1', 'col2', 'category']], hue='category', corner=True)
+plt.show()
+```
+
+SCATTER PLOT
+```
+plt.plot('col1', 'col2', 'o', data=train, markersize=4)
+plt.xlabel('col1')
+plt.ylabel('col2')
+plt.show()
+```
+
 - summary, describe, info
 
 ```
