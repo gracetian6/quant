@@ -80,13 +80,14 @@ train_date = train_date.rename(columns={0:"month", 1:"day", 2:"year"})
 - logistic for classification
 - regression for quantitative variables
   - consider linear regression assumptions, forward variable selection, transforming data/hist plots
-
+    - https://www.scikit-yb.org/en/latest/api/regressor/residuals.html
 ```
 from sklearn.model_selection import train_test_split
 X = train[['col1', 'col2', 'col3']]
 y = train[['pred']]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.20, random_state=40)
 ```
+
 7. Make predictions and evalute preformance
 - for logistic regression, do a confusion matrix
   - want high numbers on diagonals
